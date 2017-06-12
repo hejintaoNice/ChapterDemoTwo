@@ -10,9 +10,7 @@
 #import "DetailCollectionViewCell.h"
 #import "ContainCollectionViewCell.h"
 #import "MoreButtonView.h"
-#define CollectionViewNOXIBRegisterCell(collectionView, cellClass, cellID) [collectionView registerClass:[cellClass class] forCellWithReuseIdentifier:cellID];
-#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
-#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+
 @interface DetailSubTwoVC ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (assign, nonatomic) BOOL isOpen;

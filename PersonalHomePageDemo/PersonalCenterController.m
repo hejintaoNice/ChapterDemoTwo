@@ -12,7 +12,7 @@
 #import "HFStretchableTableHeaderView.h"
 #import "YUSegment.h"
 #import <MJRefresh.h>
-
+#import "DetailHeaderView.h"
 @interface PersonalCenterController ()<UITableViewDelegate, UITableViewDataSource>
 //tableView
 @property (strong, nonatomic) IBOutlet PersonalCenterTableView *tableView;
@@ -27,10 +27,9 @@
 //导航栏的背景view
 @property (strong, nonatomic) UIImageView *barImageView;
 
-@end
+@property (nonatomic,strong) DetailHeaderView *detailHeaderView;
 
-//得到屏幕width
-#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+@end
 
 @implementation PersonalCenterController
 
@@ -65,24 +64,10 @@
     self.segment.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
     [self.segment addTarget:self action:@selector(onSegmentChange) forControlEvents:UIControlEventValueChanged];
     
-    //tableView headerview
-    UIImage *image = [UIImage imageNamed:@"pc_bg"];
-    NSLog(@"image.height = %f",image.size.height);
-    UIImageView *headerView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, image.size.height)];
-    headerView.image = image;
-    headerView.contentMode = UIViewContentModeScaleAspectFill;
-
-    self.tableView.tableHeaderView = headerView;
-    
-    //下拉放大
-//    _stretchableTableHeaderView = [HFStretchableTableHeaderView new];
-//    [_stretchableTableHeaderView stretchHeaderForTableView:self.tableView withView:headerView];
+    _detailHeaderView = [[DetailHeaderView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, HeaderHeight)];
+    self.tableView.tableHeaderView = _detailHeaderView;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 ///通知的处理
 //pageViewController页面变动时的通知

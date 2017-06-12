@@ -9,9 +9,7 @@
 #import "ContainCollectionViewCell.h"
 #import "Masonry.h"
 #import "CategoriesCollecCell.h"
-#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
-#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+
 static NSString *collectionIdentifier = @"homecollectionIdentifier11111";
 @interface ContainCollectionViewCell ()<UICollectionViewDelegate,UICollectionViewDataSource>
 

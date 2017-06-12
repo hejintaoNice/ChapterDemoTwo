@@ -23,9 +23,6 @@
 
 @end
 
-//得到屏幕width
-#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
-
 @implementation ContentViewCell
 
 - (void)dealloc {

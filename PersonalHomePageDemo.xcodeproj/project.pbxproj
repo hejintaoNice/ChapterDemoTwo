@@ -13,6 +13,7 @@
 		21A3788F1EEE6E730092A077 /* ContainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A378881EEE6E730092A077 /* ContainCollectionViewCell.m */; };
 		21A378901EEE6E730092A077 /* DetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A3788A1EEE6E730092A077 /* DetailCollectionViewCell.m */; };
 		21A378911EEE6E730092A077 /* MoreButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A3788C1EEE6E730092A077 /* MoreButtonView.m */; };
+		21A378C11EEE94AD0092A077 /* DetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A378C01EEE94AD0092A077 /* DetailHeaderView.m */; };
 		3CDE67638A8AB9B469AC3863 /* libPods-PersonalHomePageDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 637A315850E49DE1BAC222CF /* libPods-PersonalHomePageDemo.a */; };
 		504C2EA11E78E103005BC3EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 504C2EA01E78E103005BC3EE /* main.m */; };
 		504C2EA41E78E103005BC3EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 504C2EA31E78E103005BC3EE /* AppDelegate.m */; };
@@ -50,6 +51,9 @@
 		21A3788A1EEE6E730092A077 /* DetailCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCollectionViewCell.m; sourceTree = "<group>"; };
 		21A3788B1EEE6E730092A077 /* MoreButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreButtonView.h; sourceTree = "<group>"; };
 		21A3788C1EEE6E730092A077 /* MoreButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreButtonView.m; sourceTree = "<group>"; };
+		21A378BF1EEE94AD0092A077 /* DetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailHeaderView.h; sourceTree = "<group>"; };
+		21A378C01EEE94AD0092A077 /* DetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailHeaderView.m; sourceTree = "<group>"; };
+		21A378E71EEE97FA0092A077 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		504C2E9C1E78E103005BC3EE /* PersonalHomePageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalHomePageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		504C2EA01E78E103005BC3EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		504C2EA21E78E103005BC3EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,7 +114,7 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		21A378831EEE6E6F0092A077 /* New Group */ = {
+		21A378831EEE6E6F0092A077 /* HorionScrollView */ = {
 			isa = PBXGroup;
 			children = (
 				21A378841EEE6E730092A077 /* CategoriesCollecCell.h */,
@@ -123,7 +127,74 @@
 				21A3788B1EEE6E730092A077 /* MoreButtonView.h */,
 				21A3788C1EEE6E730092A077 /* MoreButtonView.m */,
 			);
-			name = "New Group";
+			name = HorionScrollView;
+			sourceTree = "<group>";
+		};
+		21A378BE1EEE94260092A077 /* DetailHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				21A378BF1EEE94AD0092A077 /* DetailHeaderView.h */,
+				21A378C01EEE94AD0092A077 /* DetailHeaderView.m */,
+			);
+			name = DetailHeaderView;
+			sourceTree = "<group>";
+		};
+		21A378E81EEE9A740092A077 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				21A378ED1EEE9B8E0092A077 /* right */,
+				21A378EC1EEE9B890092A077 /* center */,
+				21A378EB1EEE9B840092A077 /* left */,
+				21A378EA1EEE9B740092A077 /* Common */,
+				21A378801EEE6E560092A077 /* DetailSubTwoVC.h */,
+				21A378811EEE6E560092A077 /* DetailSubTwoVC.m */,
+				504C2EBE1E78FAA0005BC3EE /* PersonalLeftViewController.h */,
+				504C2EBF1E78FAA0005BC3EE /* PersonalLeftViewController.m */,
+				504C2EC71E78FAEC005BC3EE /* PersonalRightViewController.h */,
+				504C2EC81E78FAEC005BC3EE /* PersonalRightViewController.m */,
+			);
+			name = C;
+			sourceTree = "<group>";
+		};
+		21A378E91EEE9B6D0092A077 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = V;
+			sourceTree = "<group>";
+		};
+		21A378EA1EEE9B740092A077 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				504C2EBB1E78F29A005BC3EE /* PersonalCenterController.h */,
+				504C2EBC1E78F29A005BC3EE /* PersonalCenterController.m */,
+				504C2EB61E78EF8B005BC3EE /* PersonalCenterTableView.h */,
+				504C2EB71E78EF8B005BC3EE /* PersonalCenterTableView.m */,
+				504C2ECA1E78FB2F005BC3EE /* BaseTableViewController.h */,
+				504C2ECB1E78FB2F005BC3EE /* BaseTableViewController.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		21A378EB1EEE9B840092A077 /* left */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = left;
+			sourceTree = "<group>";
+		};
+		21A378EC1EEE9B890092A077 /* center */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = center;
+			sourceTree = "<group>";
+		};
+		21A378ED1EEE9B8E0092A077 /* right */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = right;
 			sourceTree = "<group>";
 		};
 		504C2E931E78E103005BC3EE = {
@@ -147,31 +218,23 @@
 		504C2E9E1E78E103005BC3EE /* PersonalHomePageDemo */ = {
 			isa = PBXGroup;
 			children = (
-				21A378831EEE6E6F0092A077 /* New Group */,
+				21A378E91EEE9B6D0092A077 /* V */,
+				21A378E81EEE9A740092A077 /* C */,
+				21A378BE1EEE94260092A077 /* DetailHeaderView */,
+				21A378831EEE6E6F0092A077 /* HorionScrollView */,
 				506D91E21E7A63A00092EA15 /* Source */,
 				504C2EE51E792DBC005BC3EE /* HFStretchableTableHeaderView */,
 				504C2ED01E79186A005BC3EE /* YUSegment */,
 				504C2EA21E78E103005BC3EE /* AppDelegate.h */,
 				504C2EA31E78E103005BC3EE /* AppDelegate.m */,
-				21A378801EEE6E560092A077 /* DetailSubTwoVC.h */,
-				21A378811EEE6E560092A077 /* DetailSubTwoVC.m */,
-				504C2EBB1E78F29A005BC3EE /* PersonalCenterController.h */,
-				504C2EBC1E78F29A005BC3EE /* PersonalCenterController.m */,
-				504C2EB61E78EF8B005BC3EE /* PersonalCenterTableView.h */,
-				504C2EB71E78EF8B005BC3EE /* PersonalCenterTableView.m */,
 				504C2ECD1E7909B9005BC3EE /* ContentViewCell.h */,
 				504C2ECE1E7909B9005BC3EE /* ContentViewCell.m */,
-				504C2ECA1E78FB2F005BC3EE /* BaseTableViewController.h */,
-				504C2ECB1E78FB2F005BC3EE /* BaseTableViewController.m */,
-				504C2EBE1E78FAA0005BC3EE /* PersonalLeftViewController.h */,
-				504C2EBF1E78FAA0005BC3EE /* PersonalLeftViewController.m */,
-				504C2EC71E78FAEC005BC3EE /* PersonalRightViewController.h */,
-				504C2EC81E78FAEC005BC3EE /* PersonalRightViewController.m */,
 				504C2EA81E78E103005BC3EE /* Main.storyboard */,
 				504C2EAB1E78E103005BC3EE /* Assets.xcassets */,
 				504C2EAD1E78E103005BC3EE /* LaunchScreen.storyboard */,
 				504C2EB01E78E103005BC3EE /* Info.plist */,
 				504C2E9F1E78E103005BC3EE /* Supporting Files */,
+				21A378E71EEE97FA0092A077 /* PrefixHeader.pch */,
 			);
 			path = PersonalHomePageDemo;
 			sourceTree = "<group>";
@@ -367,6 +430,7 @@
 				504C2EA41E78E103005BC3EE /* AppDelegate.m in Sources */,
 				21A3788F1EEE6E730092A077 /* ContainCollectionViewCell.m in Sources */,
 				504C2EA11E78E103005BC3EE /* main.m in Sources */,
+				21A378C11EEE94AD0092A077 /* DetailHeaderView.m in Sources */,
 				504C2EE81E792DBC005BC3EE /* HFStretchableTableHeaderView.m in Sources */,
 				504C2ECC1E78FB2F005BC3EE /* BaseTableViewController.m in Sources */,
 				504C2ED51E79186A005BC3EE /* YUMixtureView.m in Sources */,
@@ -490,6 +554,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HQF5YZABS5;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PersonalHomePageDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = PersonalHomePageDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -504,6 +569,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HQF5YZABS5;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PersonalHomePageDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = PersonalHomePageDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
