@@ -7,7 +7,7 @@
 //
 
 #import "PersonalLeftViewController.h"
-
+#import "LeftContentDescTableViewCell.h"
 @interface PersonalLeftViewController ()
 
 @end
@@ -16,36 +16,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellid"];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.tableView.tableFooterView = [UIView new];
+    TableViewNOXIBRegisterCell(self.tableView, LeftContentDescTableViewCell, @"LeftContentDescTableViewCell_id")
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return 30;
+    return 1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44.0f;
+    
+     LeftContentDescTableViewCell *cell = (LeftContentDescTableViewCell *)[self tableView:tableView cellForRowAtIndexPath:indexPath];
+     CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+     CGSize textViewSize = [cell.desc sizeThatFits:CGSizeMake(SCREEN_WIDTH-24, FLT_MAX)];
+     CGFloat height = textViewSize.height + size.height;
+     return height + 1;
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellid" forIndexPath:indexPath];
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"left-%d",(int)indexPath.row];
-    
+    LeftContentDescTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LeftContentDescTableViewCell_id" ];
+    [cell config:@"duagduiasbiuashbdioasbdiusbduiabsdbasidduagduiasbiuashbdioasbdiusbduiabsdbasidduagduiasbiuashbdioasbdiusbduiabsdbasidduagduiasbiuashbdioasbdiusbduiabsdbasidduagduiasbiuashbdioasbdiusbduiabsdbasidduagduiasbiuashbdioasbdiusbduiabsdbasidduagduiasbiuashbdioasbdiusbduiabsdbasidduagduiasbiuashbdioasbdiusbduiabsdbasid"];
     return cell;
 }
 
@@ -54,22 +51,5 @@
     NSLog(@"点击left-%d",(int)indexPath.row);
 }
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

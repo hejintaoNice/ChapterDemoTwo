@@ -158,7 +158,6 @@ static const CGFloat        kIndicatorWidthOffset    = 20.0;
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    NSLog(@"Segment layoutSubviews");
     CGFloat segmentWidth = self.segmentWidth;
     switch (_style) {
         case YUSegmentStyleLine: {
@@ -977,7 +976,6 @@ static const CGFloat        kIndicatorWidthOffset    = 20.0;
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    NSLog(@"IndicatorView layoutSubviews");
     self.maskView.frame = self.frame;
     if (_style == YUIndicatorViewStyleLine) {
         self.lineLayer.frame = (CGRect){0, CGRectGetHeight(self.frame) - 2.0, CGRectGetWidth(self.frame), 2.0};

@@ -14,6 +14,7 @@
 		21A378901EEE6E730092A077 /* DetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A3788A1EEE6E730092A077 /* DetailCollectionViewCell.m */; };
 		21A378911EEE6E730092A077 /* MoreButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A3788C1EEE6E730092A077 /* MoreButtonView.m */; };
 		21A378C11EEE94AD0092A077 /* DetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A378C01EEE94AD0092A077 /* DetailHeaderView.m */; };
+		21A378F31EEE9FF50092A077 /* LeftContentDescTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A378F21EEE9FF50092A077 /* LeftContentDescTableViewCell.m */; };
 		3CDE67638A8AB9B469AC3863 /* libPods-PersonalHomePageDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 637A315850E49DE1BAC222CF /* libPods-PersonalHomePageDemo.a */; };
 		504C2EA11E78E103005BC3EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 504C2EA01E78E103005BC3EE /* main.m */; };
 		504C2EA41E78E103005BC3EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 504C2EA31E78E103005BC3EE /* AppDelegate.m */; };
@@ -54,6 +55,8 @@
 		21A378BF1EEE94AD0092A077 /* DetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailHeaderView.h; sourceTree = "<group>"; };
 		21A378C01EEE94AD0092A077 /* DetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailHeaderView.m; sourceTree = "<group>"; };
 		21A378E71EEE97FA0092A077 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		21A378F11EEE9FF50092A077 /* LeftContentDescTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftContentDescTableViewCell.h; sourceTree = "<group>"; };
+		21A378F21EEE9FF50092A077 /* LeftContentDescTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftContentDescTableViewCell.m; sourceTree = "<group>"; };
 		504C2E9C1E78E103005BC3EE /* PersonalHomePageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalHomePageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		504C2EA01E78E103005BC3EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		504C2EA21E78E103005BC3EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -146,12 +149,6 @@
 				21A378EC1EEE9B890092A077 /* center */,
 				21A378EB1EEE9B840092A077 /* left */,
 				21A378EA1EEE9B740092A077 /* Common */,
-				21A378801EEE6E560092A077 /* DetailSubTwoVC.h */,
-				21A378811EEE6E560092A077 /* DetailSubTwoVC.m */,
-				504C2EBE1E78FAA0005BC3EE /* PersonalLeftViewController.h */,
-				504C2EBF1E78FAA0005BC3EE /* PersonalLeftViewController.m */,
-				504C2EC71E78FAEC005BC3EE /* PersonalRightViewController.h */,
-				504C2EC81E78FAEC005BC3EE /* PersonalRightViewController.m */,
 			);
 			name = C;
 			sourceTree = "<group>";
@@ -159,6 +156,9 @@
 		21A378E91EEE9B6D0092A077 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				21A378F01EEE9FC00092A077 /* right */,
+				21A378EF1EEE9FBB0092A077 /* center */,
+				21A378EE1EEE9FB60092A077 /* left */,
 			);
 			name = V;
 			sourceTree = "<group>";
@@ -179,6 +179,8 @@
 		21A378EB1EEE9B840092A077 /* left */ = {
 			isa = PBXGroup;
 			children = (
+				504C2EBE1E78FAA0005BC3EE /* PersonalLeftViewController.h */,
+				504C2EBF1E78FAA0005BC3EE /* PersonalLeftViewController.m */,
 			);
 			name = left;
 			sourceTree = "<group>";
@@ -186,11 +188,38 @@
 		21A378EC1EEE9B890092A077 /* center */ = {
 			isa = PBXGroup;
 			children = (
+				21A378801EEE6E560092A077 /* DetailSubTwoVC.h */,
+				21A378811EEE6E560092A077 /* DetailSubTwoVC.m */,
 			);
 			name = center;
 			sourceTree = "<group>";
 		};
 		21A378ED1EEE9B8E0092A077 /* right */ = {
+			isa = PBXGroup;
+			children = (
+				504C2EC71E78FAEC005BC3EE /* PersonalRightViewController.h */,
+				504C2EC81E78FAEC005BC3EE /* PersonalRightViewController.m */,
+			);
+			name = right;
+			sourceTree = "<group>";
+		};
+		21A378EE1EEE9FB60092A077 /* left */ = {
+			isa = PBXGroup;
+			children = (
+				21A378F11EEE9FF50092A077 /* LeftContentDescTableViewCell.h */,
+				21A378F21EEE9FF50092A077 /* LeftContentDescTableViewCell.m */,
+			);
+			name = left;
+			sourceTree = "<group>";
+		};
+		21A378EF1EEE9FBB0092A077 /* center */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = center;
+			sourceTree = "<group>";
+		};
+		21A378F01EEE9FC00092A077 /* right */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -427,6 +456,7 @@
 				504C2ED61E79186A005BC3EE /* YUSegment.m in Sources */,
 				504C2EB81E78EF8B005BC3EE /* PersonalCenterTableView.m in Sources */,
 				504C2EBD1E78F29A005BC3EE /* PersonalCenterController.m in Sources */,
+				21A378F31EEE9FF50092A077 /* LeftContentDescTableViewCell.m in Sources */,
 				504C2EA41E78E103005BC3EE /* AppDelegate.m in Sources */,
 				21A3788F1EEE6E730092A077 /* ContainCollectionViewCell.m in Sources */,
 				504C2EA11E78E103005BC3EE /* main.m in Sources */,
